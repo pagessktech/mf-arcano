@@ -5,21 +5,21 @@
       INSTRUCCIONES DE ACTUALIZACIÓN RÁPIDA:
       1. Cambiar número de WhatsApp: Busca el enlace `wa.me/` cerca del final del archivo y reemplaza el número de ejemplo.
       2. Cambiar link de Instagram: Busca el enlace `instagram.com/` y actualiza la URL.
-      3. Cambiar imágenes: Busca los enlaces `https://placehold.co/` y reemplázalos con las URL de tus imágenes optimizadas.
+      3. Cambiar imágenes: Busca los enlaces `https://res.cloudinary.com/` y reemplázalos con las URL de tus imágenes optimizadas.
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO y Metadatos Esenciales -->
     <title>Marian — MF Arcano | Tarot y Numerología · San Miguel</title>
-    <meta name="description" content="Marian (MF Arcano). 35 años de experiencia en tarot, numerología y limpieza energética. Consultas presenciales en San Miguel y por videollamada.">
+    <meta name="description" content="Mariana Fassio (MF Arcano). 35 años de experiencia en tarot, numerología y limpieza energética. Consultas presenciales en San Miguel y por videollamada.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://www.mfarcano.com.ar/"> <!-- Reemplazar con URL final -->
 
     <!-- Open Graph (para redes sociales) -->
-    <meta property="og:title" content="Marian — MF Arcano | Tarot y Numerología con 35 años de experiencia">
+    <meta property="og:title" content="Mariana Fassio — MF Arcano | Tarot y Numerología con 35 años de experiencia">
     <meta property="og:description" content="Especialista en tarot evolutivo, numerología, limpiezas energéticas y más. Consultas online y presenciales en San Miguel.">
-    <meta property="og:image" content="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760640740/17_vjpcq8.jpg"> <!-- Reemplazar con imagen de portada -->
+    <meta property="og:image" content="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760705529/11_aiyfsx.jpg"> <!-- Reemplazar con imagen de portada -->
     <meta property="og:url" content="https://www.mfarcano.com.ar/"> <!-- Reemplazar con URL final -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_AR">
@@ -28,7 +28,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Marian — MF Arcano | Tarot y Numerología · San Miguel">
     <meta name="twitter:description" content="Especialista en tarot evolutivo, numerología y limpiezas energéticas. Consultas online y presenciales.">
-    <meta name="twitter:image" content="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760640740/17_vjpcq8.jpg"> <!-- Reemplazar con imagen de portada -->
+    <meta name="twitter:image" content="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760705529/11_aiyfsx.jpg"> <!-- Reemplazar con imagen de portada -->
 
     <!-- Pre-conexión para Google Fonts (optimización) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "Marian - MF Arcano",
+      "name": "Mariana Fassio - MF Arcano",
       "jobTitle": "Tarotista y Numeróloga",
       "url": "https://www.mfarcano.com.ar/",
       "image": "https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760640797/41_s7akpl.jpg",
@@ -59,7 +59,7 @@
         "addressCountry": "AR"
       },
       "telephone": "+54-911-3691-9318",
-      "description": "Con 35 años de trayectoria, Marian ofrece consultas de tarot, numerología, limpieza energética, grafología y más. Atención presencial en San Miguel y por videollamada a todo el mundo."
+      "description": "Con 35 años de trayectoria, Mariana Fassio ofrece consultas de tarot, numerología, limpieza energética, grafología y más. Atención presencial en San Miguel y por videollamada a todo el mundo."
     }
     </script>
 
@@ -102,7 +102,7 @@
         overflow-x: hidden;
       }
       
-      body.loading {
+      body.loading, body.modal-open {
         overflow: hidden;
       }
 
@@ -194,6 +194,16 @@
       .btn-secondary:hover {
         background-color: var(--c-mint);
         color: var(--c-text);
+      }
+      
+      .btn-link {
+        background: none;
+        border: none;
+        color: var(--c-sage);
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: underline;
+        font-size: 0.9rem;
       }
       
       /* ----------- */
@@ -402,7 +412,7 @@
       }
       .hero-image-wrapper {
         position: relative;
-        max-width: 400px;
+        max-width: 450px;
         margin: 0 auto;
         animation: float 6s ease-in-out infinite;
       }
@@ -412,7 +422,7 @@
         100% { transform: translateY(0px); }
       }
       .hero-image {
-        border-radius: 50%;
+        border-radius: 20px;
         border: 10px solid var(--c-white);
         box-shadow: 0 15px 30px var(--shadow);
       }
@@ -490,6 +500,8 @@
         text-align: center;
         border: 1px solid var(--c-mint);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
       }
       .service-card:hover {
         transform: translateY(-10px);
@@ -501,13 +513,33 @@
         margin: 0 auto 1.5rem;
         color: var(--c-sage);
       }
+       .service-card-image-wrapper {
+        height: 160px;
+        margin: 0 auto 1.5rem;
+        border-radius: 15px;
+        overflow: hidden;
+        width: 100%;
+      }
+      .service-card-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
       .service-card h3 {
         margin-bottom: 0.5rem;
       }
       .service-card p {
         color: var(--c-light-text);
         margin-bottom: 1.5rem;
-        min-height: 50px;
+        flex-grow: 1;
+      }
+      .service-card .card-ctas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: auto;
+        padding-top: 1rem;
       }
 
       /* ----------- */
@@ -731,6 +763,82 @@
         opacity: 0.7;
       }
       
+      /* ----------- */
+      /* Modal       */
+      /* ----------- */
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        background-color: var(--c-white);
+        padding: 2.5rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        z-index: 1002;
+        max-width: 600px;
+        width: 90%;
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      .modal.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(46, 46, 46, 0.5);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        z-index: 1001;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+      }
+      .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .modal-content h3 {
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+      .modal-content ul {
+        list-style: none;
+        padding-left: 0;
+        text-align: left;
+      }
+      .modal-content li {
+        padding-left: 1.5rem;
+        position: relative;
+        margin-bottom: 0.8rem;
+        color: var(--c-light-text);
+      }
+       .modal-content li::before {
+        content: '✨';
+        position: absolute;
+        left: 0;
+        top: 0;
+       }
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        font-size: 2.5rem;
+        cursor: pointer;
+        color: var(--c-metal);
+        line-height: 1;
+      }
+      
       /* ----------------- */
       /* Media Queries (Desktop) */
       /* ----------------- */
@@ -758,6 +866,9 @@
         .contact-grid {
           grid-template-columns: 1.5fr 1fr;
         }
+        .modal-image {
+          max-height: none;
+        }
       }
 
       @media (min-width: 1024px) {
@@ -784,7 +895,7 @@
     <!-- Header -->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#inicio" class="nav-logo">MF Arcano — Marian</a>
+        <a href="#inicio" class="nav-logo">MF Arcano — Mariana Fassio</a>
         
         <ul class="nav-menu" id="nav-menu">
           <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
@@ -817,7 +928,7 @@
         <div class="hero-content container reveal-on-scroll">
           <div class="hero-text">
             <span class="hero-badge">35 años de trayectoria</span>
-            <h1>Marian — MF Arcano</h1>
+            <h1>Mariana Fassio — MF Arcano</h1>
             <p>Tarot, Numerología y Limpiezas energéticas con una trayectoria de confianza para guiarte en tu camino.</p>
             <div class="hero-ctas">
               <a href="#contacto" class="btn btn-primary">Reservar consulta</a>
@@ -825,7 +936,7 @@
             </div>
           </div>
           <div class="hero-image-wrapper">
-            <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760640740/17_vjpcq8.jpg" alt="Retrato profesional de Marian, fundadora de MF Arcano" class="hero-image" loading="lazy">
+            <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760705529/11_aiyfsx.jpg" alt="Un espacio de consulta con cartas de tarot dispuestas sobre la mesa" class="hero-image" loading="lazy">
           </div>
         </div>
       </section>
@@ -839,8 +950,8 @@
             </div>
             <div class="about-text">
               <h2>Una vida dedicada a la guía espiritual</h2>
-              <p>Me llamo Mariana (Marian) y soy la fundadora de MF Arcano. Mi camino comenzó a los 18 años estudiando parapsicología en la Universidad San Jorge. Desde entonces, mi gran pasión, la numerología, me llevó a especializarme con docentes de España y EE. UU.</p>
-              <p>A lo largo de 35 años, he integrado saberes diversos: Tarot, Reiki, péndulo hebreo, Feng Shui, grafología (perito), radiónica, foto Kirlian, runas, alquimia, chamanismo, PNL, gemoterapia y aromaterapia.</p>
+              <p>Me llamo Mariana Fassio (Marian) y soy la fundadora de MF Arcano. Mi camino comenzó a los 18 años estudiando parapsicología en la Universidad San Jorge. Desde entonces, mi gran pasión, la numerología, me llevó a especializarme con docentes de España y EE. UU. Mi búsqueda de conocimiento también me llevó a vivir un año en Ecuador, donde me perfeccioné en chamanismo.</p>
+              <p>A lo largo de 35 años, he integrado saberes diversos: Tarot, Reiki, péndulo hebreo, Feng Shui, grafología (perito), radiónica, foto Kirlian, runas, alquimia, PNL, Geobiología, Quiromancía, gemoterapia y aromaterapia.</p>
               <p>Mi misión es ofrecerte una guía clara y profesional, ya sea en consultas presenciales, empresariales o por videollamada, combinando herramientas ancestrales con una perspectiva moderna.</p>
             </div>
           </div>
@@ -883,39 +994,51 @@
           <div class="services-grid">
             <!-- Servicio 1 -->
             <div class="service-card reveal-on-scroll">
-              <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.75-2.25M21 12l-3.75 2.25" /></svg>
+              <div class="service-card-image-wrapper">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760706185/Imagen_de_WhatsApp_2025-10-17_a_las_10.01.23_246a6b0e_k7urgy.jpg" alt="Estudio de Numerología detallado">
               </div>
               <h3>Numerología</h3>
-              <p>Lecturas personales, cambios numerológicos para personas, casas, negocios, vehículos y productos.</p>
-              <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
+              <p>Descubrí el poder de los números para transformar tu vida personal y profesional. Estudios completos, cambios de vibración y más.</p>
+              <div class="card-ctas">
+                <button class="btn-link" data-modal-target="modal-numerologia">Ver más info</button>
+                <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
+              </div>
             </div>
             <!-- Servicio 2 -->
             <div class="service-card reveal-on-scroll" style="transition-delay: 0.1s;">
-              <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125z" /></svg>
+              <div class="service-card-image-wrapper">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760640885/24_y3mrpn.jpg" alt="Cartas de Tarot sobre una mesa">
               </div>
               <h3>Tarot</h3>
               <p>Consultas de tarot evolutivo y predictivo para obtener claridad. Talleres de formación para todos los niveles.</p>
-              <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
-            </div>
-            <!-- Servicio 3 -->
-            <div class="service-card reveal-on-scroll" style="transition-delay: 0.2s;">
-              <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" /></svg>
+              <div class="card-ctas">
+                 <button class="btn-link" data-modal-target="modal-tarot">Ver más info</button>
+                <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
               </div>
-              <h3>Limpieza Energética</h3>
-              <p>Diagnóstico de energías en casas y negocios con péndulo/varillas, seguido de una intervención de limpieza y armonización.</p>
-              <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
             </div>
-            <!-- Servicio 4 -->
+            <!-- Servicio Reiki -->
+            <div class="service-card reveal-on-scroll" style="transition-delay: 0.2s;">
+              <div class="service-card-image-wrapper">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760707123/27_y9zyix.jpg" alt="Sesión de Reiki con gemas y cuencos">
+              </div>
+              <h3>Reiki</h3>
+              <p>Terapia de canalización energética para promover la sanación y el equilibrio físico, mental y emocional.</p>
+              <div class="card-ctas">
+                 <button class="btn-link" data-modal-target="modal-reiki">Ver más info</button>
+                <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
+              </div>
+            </div>
+            <!-- Servicio Grafologia -->
             <div class="service-card reveal-on-scroll">
-              <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" /></svg>
+              <div class="service-card-image-wrapper">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760707390/Imagen_de_WhatsApp_2025-10-17_a_las_10.11.05_5abe59b3_shzods.jpg" alt="Análisis de Grafología y Firma">
               </div>
               <h3>Grafología y Firma</h3>
               <p>Análisis grafológico para autoconocimiento y mejora de la firma para potenciar su vibración energética positiva.</p>
-              <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
+              <div class="card-ctas">
+                <button class="btn-link" data-modal-target="modal-grafologia">Ver más info</button>
+                <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
+              </div>
             </div>
             <!-- Servicio 5 -->
             <div class="service-card reveal-on-scroll" style="transition-delay: 0.1s;">
@@ -924,7 +1047,9 @@
               </div>
               <h3>Trabajos con Velas</h3>
               <p>Preparación de cirios litúrgicos y trabajos energéticos personalizados para liberación, limpieza y apertura de caminos.</p>
-              <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
+              <div class="card-ctas">
+                <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
+              </div>
             </div>
             <!-- Servicio 6 -->
             <div class="service-card reveal-on-scroll" style="transition-delay: 0.2s;">
@@ -933,7 +1058,9 @@
               </div>
               <h3>Cursos y Talleres</h3>
               <p>Formación en numerología, tarot, uso del péndulo y trabajos con velas para quienes deseen iniciar su propio camino.</p>
-              <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
+              <div class="card-ctas">
+                <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
+              </div>
             </div>
           </div>
         </div>
@@ -1050,6 +1177,7 @@
                   <option value="">Seleccioná un servicio...</option>
                   <option value="Numerologia">Numerología</option>
                   <option value="Tarot">Tarot</option>
+                  <option value="Reiki">Reiki</option>
                   <option value="Limpieza Energetica">Limpieza Energética</option>
                   <option value="Grafologia">Grafología y Firma</option>
                   <option value="Velas">Trabajos con Velas</option>
@@ -1106,6 +1234,73 @@
       </div>
     </footer>
     
+    <!-- Modal Numerología -->
+    <div class="modal" id="modal-numerologia">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+        <h3>Numerología en Profundidad</h3>
+        <div class="modal-body">
+          <ul>
+            <li>Licenciada en Numerología Pitagórica, Mágica, Cabalística, Tántrica y Kármica.</li>
+            <li>Consultas Personales y Empresariales.</li>
+            <li>Te asesoro para ponerle el nombre a tu bebé (su personalidad moldea su vida).</li>
+            <li>Cambio Numerológico para casas, negocios, vehículos y empresas para transmutar energías destructivas.</li>
+            <li>Asesoramiento para lanzamiento de empresas y productos: nombre, logo, colores y días favorables.</li>
+            <li>Estudios numerológicos completos y de por vida para estar siempre un paso adelante.</li>
+            <li>Estudio de la vibración de tu firma.</li>
+            <li>Cursos y talleres de Numerología.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal Tarot -->
+    <div class="modal" id="modal-tarot">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+        <h3>Tarot en Profundidad</h3>
+        <div class="modal-body">
+          <ul>
+            <li><strong>Tipos:</strong> Evolutivo, Predictivo y Terapéutico.</li>
+            <li>Consultas de Tarot combinadas con Numerología y Péndulo.</li>
+            <li>Sesiones profundas para dar claridad, resolver conflictos y trazar un plan a futuro claro.</li>
+            <li><strong>Sesión Breve (30 min):</strong> Enfocada en preguntas o situaciones específicas. Ideal para un consejo rápido, apoyado con péndulo, runas o numerología si es necesario.</li>
+            <li>Preguntas individuales por Sí o No (1 o 3 preguntas).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Reiki -->
+    <div class="modal" id="modal-reiki">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+        <h3>Reiki en Profundidad</h3>
+        <div class="modal-body">
+          <ul>
+            <li>Terapia de canalización energética vital universal por medio de la imposición de manos.</li>
+            <li>Promueve la sanación y el equilibrio físico, mental y emocional.</li>
+            <li>En las sesiones utilizo herramientas como Péndulo Hebreo, gemas, música, simbología sagrada y cuencos para potenciar la terapia.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Grafologia -->
+    <div class="modal" id="modal-grafologia">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+        <h3>Grafología y Firma en Profundidad</h3>
+        <div class="modal-body">
+          <ul>
+            <li>Análisis grafológico y test para autoconocimiento y mejora personal.</li>
+            <li>Mejora de la firma, potenciando de esa manera una vibración energética positiva de bienestar y equilibrio.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay"></div>
+
     <script>
       document.addEventListener('DOMContentLoaded', () => {
 
@@ -1280,8 +1475,53 @@
                 contactForm.reset();
             });
         }
+
+        // --- Modal Handling ---
+        const openModalButtons = document.querySelectorAll('[data-modal-target]');
+        const closeModalButtons = document.querySelectorAll('.modal-close');
+        const overlay = document.querySelector('.modal-overlay');
+
+        const openModal = (modal) => {
+          if (modal == null) return;
+          modal.classList.add('active');
+          overlay.classList.add('active');
+          document.body.classList.add('modal-open');
+        };
+
+        const closeModal = (modal) => {
+          if (modal == null) return;
+          modal.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('modal-open');
+        };
+
+        openModalButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const modal = document.querySelector(`#${button.dataset.modalTarget}`);
+            openModal(modal);
+          });
+        });
+
+        if (overlay) {
+          overlay.addEventListener('click', () => {
+            const modals = document.querySelectorAll('.modal.active');
+            modals.forEach(modal => {
+              closeModal(modal);
+            });
+          });
+        }
+
+        closeModalButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
+            closeModal(modal);
+          });
+        });
+
       });
     </script>
 </body>
 </html>
+
+
 
