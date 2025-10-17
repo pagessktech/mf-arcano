@@ -294,18 +294,20 @@
       .nav-desktop-menu {
         list-style: none;
         display: flex;
-        flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+        flex-wrap: nowrap;
+        padding: 0;
+        margin: 0;
       }
       .nav-item {
-        margin-left: 1.8rem;
+        margin-left: 1.5rem;
       }
       .nav-link {
         font-weight: 600;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         color: var(--c-light-text);
         position: relative;
         padding-bottom: 5px;
-        white-space: nowrap; /* Evita que el texto del enlace se rompa */
+        white-space: nowrap;
       }
       .nav-link::after {
         content: '';
@@ -328,7 +330,7 @@
       /* ------------- */
       /* Menú Móvil    */
       /* ------------- */
-      @media screen and (max-width: 992px) { /* Ajustado el breakpoint para mejor responsive */
+      @media screen and (max-width: 1024px) {
         .nav-desktop-menu, .nav-cta-desktop {
           display: none;
         }
@@ -353,6 +355,13 @@
           opacity: 0;
           visibility: hidden;
           transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        .nav-mobile-menu .nav-list {
+           list-style: none;
+           padding: 0;
+           margin: 0;
+           text-align: center;
         }
 
         .show-menu {
@@ -505,6 +514,26 @@
       @keyframes scrollGallery {
         0% { transform: translateX(0); }
         100% { transform: translateX(-50%); }
+      }
+      
+      /* ------------- */
+      /* Insumos      */
+      /* ------------- */
+      #insumos {
+        background-color: var(--c-white);
+        text-align: center;
+      }
+      #insumos p {
+        max-width: 600px;
+        margin: 0 auto 2.5rem auto; /* More space */
+        color: var(--c-light-text);
+      }
+      .insumos-carousel {
+        max-width: 400px; /* Adjust for squarer images */
+      }
+      .insumos-carousel .testimonial-slide img {
+        aspect-ratio: 1 / 1; /* Make it square */
+        object-fit: cover;
       }
 
       /* ----------- */
@@ -941,6 +970,7 @@
           <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
           <li class="nav-item"><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
           <li class="nav-item"><a href="#galeria" class="nav-link">Galería</a></li>
+          <li class="nav-item"><a href="#insumos" class="nav-link">Venta de Insumos</a></li>
           <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
           <li class="nav-item"><a href="#testimonios" class="nav-link">Testimonios</a></li>
           <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
@@ -952,6 +982,7 @@
             <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
             <li class="nav-item"><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
             <li class="nav-item"><a href="#galeria" class="nav-link">Galería</a></li>
+            <li class="nav-item"><a href="#insumos" class="nav-link">Venta de Insumos</a></li>
             <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
             <li class="nav-item"><a href="#testimonios" class="nav-link">Testimonios</a></li>
             <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
@@ -983,6 +1014,7 @@
             <div class="hero-ctas">
               <a href="#contacto" class="btn btn-primary">Reservar consulta</a>
               <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
+              <a href="#insumos" class="btn btn-secondary">Venta de Insumos</a>
             </div>
           </div>
           <div class="hero-image-wrapper">
@@ -1030,6 +1062,44 @@
               <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760640886/30_cddksw.jpg" aria-hidden="true" alt="">
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Sección Insumos --><section id="insumos">
+        <div class="container reveal-on-scroll">
+          <h2>Venta de Insumos Esotéricos</h2>
+          <p>Además de mis servicios, ofrezco una selección de insumos esotéricos de alta calidad por encargo para potenciar tu práctica y bienestar.</p>
+          <ul class="insumos-list">
+            <li>Lámparas</li>
+            <li>Orgones</li>
+            <li>Mazos de Tarot</li>
+            <li>Aceites de elaboración propia</li>
+            <li>Cirios</li>
+            <li>Pastas específicas</li>
+            <li>Amuletos y Talismanes</li>
+            <li>Velas preparadas</li>
+            <li>Gemas</li>
+            <li>Sahumos especiales</li>
+            <li>Curas Feng Shui</li>
+          </ul>
+          <div class="testimonial-carousel insumos-carousel">
+            <div class="testimonial-track insumos-track">
+              <div class="testimonial-slide">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760731651/Imagen_de_WhatsApp_2025-10-17_a_las_16.15.52_03a7adcd_u2m57p.jpg" alt="Insumo esotérico 1">
+              </div>
+              <div class="testimonial-slide">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760731651/Imagen_de_WhatsApp_2025-10-17_a_las_16.15.52_a07c3a41_brp7bh.jpg" alt="Insumo esotérico 2">
+              </div>
+              <div class="testimonial-slide">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760731651/Imagen_de_WhatsApp_2025-10-17_a_las_16.15.53_650b93ff_apzlar.jpg" alt="Insumo esotérico 3">
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <div class="carousel-dots insumos-dots"></div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5491136919318?text=Hola%20Marian,%20quisiera%20consultar%20por%20los%20insumos%20esot%C3%A9ricos." target="_blank" class="btn btn-primary" style="margin-top: 2.5rem;">Solicitar por WhatsApp</a>
         </div>
       </section>
       
@@ -1583,43 +1653,50 @@
             counterObserver.observe(counter);
         });
 
-        // --- Carrusel de Testimonios ---
-        const track = document.querySelector('.testimonial-track');
-        if(track) {
-          const slides = Array.from(track.children);
-          const dotsNav = document.querySelector('.carousel-dots');
-          if(slides.length > 0) {
-            const slideWidth = slides[0].getBoundingClientRect().width;
+        // --- Lógica de Carrusel Reutilizable ---
+        const initCarousel = (trackSelector, dotsSelector, slideMargin = 32) => {
+            const track = document.querySelector(trackSelector);
+            if (!track) return;
+
+            const slides = Array.from(track.children);
+            const dotsNav = document.querySelector(dotsSelector);
+            if (slides.length <= 1) return;
+            
+            let slideWidth = slides[0].getBoundingClientRect().width;
             let currentIndex = 0;
 
             const dots = slides.map((_, i) => {
-              const button = document.createElement('button');
-              if (i === 0) button.classList.add('active');
-              button.addEventListener('click', () => {
-                moveToSlide(i);
-              });
-              return button;
+                const button = document.createElement('button');
+                if (i === 0) button.classList.add('active');
+                button.addEventListener('click', () => moveToSlide(i));
+                return button;
             });
-            if(dotsNav) dots.forEach(dot => dotsNav.appendChild(dot));
+
+            if (dotsNav) dots.forEach(dot => dotsNav.appendChild(dot));
 
             const moveToSlide = (targetIndex) => {
-              if (dots.length > 0) {
-                  track.style.transform = 'translateX(-' + ((slideWidth + 32) * targetIndex) + 'px)';
-                  dots[currentIndex].classList.remove('active');
-                  dots[targetIndex].classList.add('active');
-                  currentIndex = targetIndex;
-              }
+                if (!dots[currentIndex]) return;
+                track.style.transform = `translateX(-${(slideWidth + slideMargin) * targetIndex}px)`;
+                dots[currentIndex].classList.remove('active');
+                dots[targetIndex].classList.add('active');
+                currentIndex = targetIndex;
             };
             
+            // Recalcular ancho en resize
+            window.addEventListener('resize', () => {
+                slideWidth = slides[0].getBoundingClientRect().width;
+                moveToSlide(currentIndex);
+            });
+
             setInterval(() => {
-              let nextIndex = currentIndex + 1;
-              if (nextIndex >= slides.length) {
-                nextIndex = 0;
-              }
-              moveToSlide(nextIndex);
+                let nextIndex = (currentIndex + 1) % slides.length;
+                moveToSlide(nextIndex);
             }, 5000);
-          }
-        }
+        };
+
+        // --- Inicializar Carruseles ---
+        initCarousel('.testimonial-track', '.testimonial-dots');
+        initCarousel('.insumos-track', '.insumos-dots');
         
         // --- Menú Móvil ---
         const navMenu = document.getElementById('nav-menu'),
@@ -1709,8 +1786,7 @@
         const closeModal = (modal) => {
           if (modal == null) return;
           modal.classList.remove('active');
-          overlay.classList.remove('active');
-          document.body.classList.remove('modal-open');
+          overlay.classList.remove('modal-open');
         };
 
         openModalButtons.forEach(button => {
@@ -1740,6 +1816,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
