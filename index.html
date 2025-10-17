@@ -91,7 +91,7 @@
         overflow-x: hidden;
       }
       
-      body.loading, body.modal-open {
+      body.loading, body.modal-open, body.nav-open {
         overflow: hidden;
       }
 
@@ -1600,23 +1600,26 @@
               navToggle = document.getElementById('nav-toggle'),
               navClose = document.getElementById('nav-close');
 
+        const openMobileMenu = () => {
+          navMenu.classList.add('show-menu');
+          document.body.classList.add('nav-open');
+        };
+
+        const closeMobileMenu = () => {
+          navMenu.classList.remove('show-menu');
+          document.body.classList.remove('nav-open');
+        };
+
         if (navToggle) {
-            navToggle.addEventListener('click', () => {
-                navMenu.classList.add('show-menu');
-            });
+          navToggle.addEventListener('click', openMobileMenu);
         }
 
         if (navClose) {
-            navClose.addEventListener('click', () => {
-                navMenu.classList.remove('show-menu');
-            });
+          navClose.addEventListener('click', closeMobileMenu);
         }
 
-        const navLinks = document.querySelectorAll('.nav-link');
-        const linkAction = () => {
-            navMenu.classList.remove('show-menu');
-        }
-        navLinks.forEach(n => n.addEventListener('click', linkAction));
+        const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+        navLinks.forEach(n => n.addEventListener('click', closeMobileMenu));
 
 
         // --- Smooth Scroll con Offset para Header Fijo ---
@@ -1711,6 +1714,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
