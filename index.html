@@ -291,9 +291,10 @@
         color: var(--c-gold);
         flex-shrink: 0;
       }
-      .nav-menu {
+      .nav-desktop-menu {
         list-style: none;
         display: flex;
+        flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
       }
       .nav-item {
         margin-left: 1.8rem;
@@ -304,6 +305,7 @@
         color: var(--c-light-text);
         position: relative;
         padding-bottom: 5px;
+        white-space: nowrap; /* Evita que el texto del enlace se rompa */
       }
       .nav-link::after {
         content: '';
@@ -319,42 +321,57 @@
         width: 100%;
       }
       
-      .nav-toggle, .nav-close {
+      .nav-toggle, .nav-mobile-menu {
         display: none;
       }
       
       /* ------------- */
       /* Menú Móvil    */
       /* ------------- */
-      @media screen and (max-width: 820px) {
+      @media screen and (max-width: 992px) { /* Ajustado el breakpoint para mejor responsive */
+        .nav-desktop-menu, .nav-cta-desktop {
+          display: none;
+        }
+
         .nav-logo {
           font-size: 1rem;
         }
-        .nav-menu {
+        .nav-mobile-menu {
           position: fixed;
-          flex-direction: column;
           top: 0;
-          right: -100%;
-          width: 70%;
+          left: 0;
+          width: 100%;
           height: 100%;
-          background-color: var(--c-new-background); /* Usamos la nueva variable */
-          box-shadow: -2px 0 10px var(--shadow);
-          padding: 6rem 2rem 0;
-          transition: right 0.4s ease-in-out;
+          background-color: rgba(58, 61, 57, 0.95);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
           z-index: 110;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        .show-menu {
+          opacity: 1;
+          visibility: visible;
         }
         
-        .nav-item {
-          margin-left: 0;
-          margin-bottom: 2.5rem;
+        .nav-mobile-menu .nav-item {
+          margin: 0 0 2rem 0;
         }
         
-        .nav-link {
-          font-size: 1.1rem;
-          color: var(--c-text);
+        .nav-mobile-menu .nav-link {
+          font-family: var(--font-heading);
+          font-size: clamp(1.5rem, 6vw, 2rem);
+          color: var(--c-cream);
+          padding: 0.5rem;
         }
-        
-        .header .btn {
+
+        .nav-mobile-menu .nav-link::after {
           display: none;
         }
         
@@ -362,6 +379,8 @@
           display: block;
           cursor: pointer;
           color: var(--c-text);
+          z-index: 120;
+          position: relative;
         }
         
         .nav-close {
@@ -370,11 +389,7 @@
           top: 1.5rem;
           right: 1.5rem;
           cursor: pointer;
-          color: var(--c-text);
-        }
-        
-        .show-menu {
-          right: 0;
+          color: var(--c-cream);
         }
       }
 
@@ -922,7 +937,7 @@
           <span>Mariana Fassio</span>
         </a>
         
-        <ul class="nav-menu" id="nav-menu">
+        <ul class="nav-desktop-menu">
           <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
           <li class="nav-item"><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
           <li class="nav-item"><a href="#galeria" class="nav-link">Galería</a></li>
@@ -930,11 +945,22 @@
           <li class="nav-item"><a href="#testimonios" class="nav-link">Testimonios</a></li>
           <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
           <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
-          
-          <div class="nav-close" id="nav-close">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
-          </div>
         </ul>
+
+        <div class="nav-mobile-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+            <li class="nav-item"><a href="#galeria" class="nav-link">Galería</a></li>
+            <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
+            <li class="nav-item"><a href="#testimonios" class="nav-link">Testimonios</a></li>
+            <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+            <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+          </ul>
+          <div class="nav-close" id="nav-close">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="32" height="32"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+          </div>
+        </div>
         
         <div class="nav-cta-desktop">
              <a href="#contacto" class="btn btn-primary">Agendá tu consulta</a>
@@ -1618,7 +1644,7 @@
           navClose.addEventListener('click', closeMobileMenu);
         }
 
-        const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+        const navLinks = document.querySelectorAll('.nav-mobile-menu .nav-link');
         navLinks.forEach(n => n.addEventListener('click', closeMobileMenu));
 
 
@@ -1714,6 +1740,7 @@
     </script>
 </body>
 </html>
+
 
 
 
