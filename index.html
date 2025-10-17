@@ -585,7 +585,7 @@
       }
       .testimonial-carousel {
         position: relative;
-        max-width: 800px;
+        max-width: 350px; /* Ancho para imágenes verticales */
         margin: auto;
         overflow: hidden;
       }
@@ -595,20 +595,15 @@
       }
       .testimonial-slide {
         min-width: 100%;
-        padding: 2rem;
-        background-color: var(--c-white);
-        border-radius: 20px;
-        box-shadow: 0 5px 15px var(--shadow);
+        padding: 0;
         margin: 0 1rem;
-        text-align: center;
+        box-sizing: border-box;
       }
-      .testimonial-slide p {
-        font-style: italic;
-        color: var(--c-light-text);
-        margin-bottom: 1rem;
-      }
-      .testimonial-author {
-        font-weight: bold;
+      .testimonial-slide img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px var(--shadow);
       }
       .carousel-nav {
         display: flex;
@@ -1115,6 +1110,17 @@
                 <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
               </div>
             </div>
+             <!-- Servicio Trabajos con Velas --><div class="service-card reveal-on-scroll">
+              <div class="service-card-image-wrapper">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760723513/Imagen_de_WhatsApp_2025-10-17_a_las_14.50.23_11f55b1e_kxd76d.jpg" alt="Velas de forma para trabajos energéticos">
+              </div>
+              <h3>Trabajos con Velas</h3>
+              <p>Trabajos energéticos de limpieza, apertura, armonía y liberación, realizados con la intención y energía del color y la forma.</p>
+              <div class="card-ctas">
+                <button class="btn-link" data-modal-target="modal-velas">Ver más info</button>
+                <a href="#contacto" class="btn btn-secondary">Pedir consulta</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1145,20 +1151,20 @@
       
       <!-- Sección Testimonios --><section id="testimonios">
         <div class="container">
-          <h2 class="reveal-on-scroll">Lo que dicen mis consultantes</h2>
+          <h2 class="reveal-on-scroll">Testimonios de Clientes</h2>
           <div class="testimonial-carousel reveal-on-scroll">
             <div class="testimonial-track">
-              <!-- Slide 1 --><div class="testimonial-slide">
-                <p>"La lectura de Marian fue increíblemente precisa y reveladora. Me dio la claridad que necesitaba para tomar decisiones importantes en mi carrera. ¡Súper recomendable!"</p>
-                <div class="testimonial-author">⭐⭐⭐⭐⭐<br>— Luciana P., Diseñadora Gráfica</div>
+              <div class="testimonial-slide">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760724614/Imagen_de_WhatsApp_2025-10-17_a_las_14.50.23_39f9f3f9_jtnbad.jpg" alt="Testimonio de cliente 1">
               </div>
-              <!-- Slide 2 --><div class="testimonial-slide">
-                <p>"Hicimos una limpieza energética en nuestro nuevo local y el cambio fue inmediato. El ambiente se siente más liviano y los clientes entran con otra energía. Gracias, Marian."</p>
-                <div class="testimonial-author">⭐⭐⭐⭐⭐<br>— Martín R., Emprendedor</div>
+              <div class="testimonial-slide">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760724615/Imagen_de_WhatsApp_2025-10-17_a_las_14.50.23_a4c22c59_o4entf.jpg" alt="Testimonio de cliente 2">
               </div>
-              <!-- Slide 3 --><div class="testimonial-slide">
-                <p>"El estudio numerológico fue un antes y un después. Entendí patrones de mi vida que se repetían y ahora tengo herramientas para trabajar en ellos. Una genia."</p>
-                <div class="testimonial-author">⭐⭐⭐⭐⭐<br>— Sofía G., Abogada</div>
+              <div class="testimonial-slide">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760724615/Imagen_de_WhatsApp_2025-10-17_a_las_14.50.24_79266a81_nluw2p.jpg" alt="Testimonio de cliente 3">
+              </div>
+              <div class="testimonial-slide">
+                <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760724615/Imagen_de_WhatsApp_2025-10-17_a_las_14.50.24_56180f28_oxwwrk.jpg" alt="Testimonio de cliente 4">
               </div>
             </div>
             <div class="carousel-nav">
@@ -1230,8 +1236,8 @@
                   <option value="Geobiologia y Radiestesia">Geobiología y Radiestesia</option>
                   <option value="Pendulo">Péndulo</option>
                   <option value="Amuletos y Talismanes">Amuletos y Talismanes</option>
+                  <option value="Trabajos con Velas">Trabajos con Velas</option>
                   <option value="Limpieza Energetica">Limpieza Energética</option>
-                  <option value="Velas">Trabajos con Velas</option>
                   <option value="Cursos">Cursos y Talleres</option>
                   <option value="Otro">Otro</option>
                 </select>
@@ -1429,6 +1435,23 @@
         </div>
       </div>
     </div>
+     <!-- Modal Trabajos con Velas --><div class="modal" id="modal-velas">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+        <h3>Trabajos con Velas de Forma</h3>
+        <div class="modal-body">
+          <ul>
+            <li>Trabajos de limpieza, apertura para juicios y trámites, ventas y compras.</li>
+            <li>Fomenta la unión familiar, ayuda en estudios y crea armonía.</li>
+            <li>Aporta liberación, ayuda a tomar decisiones importantes y a superar adicciones.</li>
+            <li>Con las velas de forma se obtienen excelentes resultados al combinar la energía del color, la forma y la intención del operador.</li>
+            <li>Se agregan aceites, símbolos y otros elementos para potenciar lo deseado.</li>
+            <li>Más de 30 años de experiencia con resultados excelentes. Se requiere siempre consulta previa.</li>
+          </ul>
+          <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760723517/Imagen_de_WhatsApp_2025-10-17_a_las_14.50.23_77aaab0e_hhlhez.jpg" alt="Velas de forma para trabajos energéticos" style="width:100%; border-radius:15px; margin-top:1.5rem;">
+        </div>
+      </div>
+    </div>
     <div class="modal-overlay"></div>
 
     <script>
@@ -1507,33 +1530,37 @@
         if(track) {
           const slides = Array.from(track.children);
           const dotsNav = document.querySelector('.carousel-dots');
-          const slideWidth = slides[0].getBoundingClientRect().width;
-          let currentIndex = 0;
+          if(slides.length > 0) {
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            let currentIndex = 0;
 
-          const dots = slides.map((_, i) => {
-            const button = document.createElement('button');
-            if (i === 0) button.classList.add('active');
-            button.addEventListener('click', () => {
-              moveToSlide(i);
+            const dots = slides.map((_, i) => {
+              const button = document.createElement('button');
+              if (i === 0) button.classList.add('active');
+              button.addEventListener('click', () => {
+                moveToSlide(i);
+              });
+              return button;
             });
-            return button;
-          });
-          if(dotsNav) dots.forEach(dot => dotsNav.appendChild(dot));
+            if(dotsNav) dots.forEach(dot => dotsNav.appendChild(dot));
 
-          const moveToSlide = (targetIndex) => {
-            track.style.transform = 'translateX(-' + ((slideWidth + 32) * targetIndex) + 'px)';
-            dots[currentIndex].classList.remove('active');
-            dots[targetIndex].classList.add('active');
-            currentIndex = targetIndex;
-          };
-          
-          setInterval(() => {
-            let nextIndex = currentIndex + 1;
-            if (nextIndex >= slides.length) {
-              nextIndex = 0;
-            }
-            moveToSlide(nextIndex);
-          }, 5000);
+            const moveToSlide = (targetIndex) => {
+              if (dots.length > 0) {
+                  track.style.transform = 'translateX(-' + ((slideWidth + 32) * targetIndex) + 'px)';
+                  dots[currentIndex].classList.remove('active');
+                  dots[targetIndex].classList.add('active');
+                  currentIndex = targetIndex;
+              }
+            };
+            
+            setInterval(() => {
+              let nextIndex = currentIndex + 1;
+              if (nextIndex >= slides.length) {
+                nextIndex = 0;
+              }
+              moveToSlide(nextIndex);
+            }, 5000);
+          }
         }
         
         // --- Menú Móvil ---
@@ -1652,6 +1679,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
