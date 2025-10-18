@@ -1718,16 +1718,25 @@
         });
 
         // --- Lógica de Carrusel Reutilizable ---
-        const initCarousel = (trackSelector, dotsSelector, slideMargin = 32) => {
-            const track = document.querySelector(trackSelector);
-            if (!track) return;
+        const initCarousel = (carouselSelector, slideMargin = 32) => {
+            const carousel = document.querySelector(carouselSelector);
+            if (!carousel) return;
+            
+            const track = carousel.querySelector('.testimonial-track');
+            const dotsNav = carousel.querySelector('.carousel-dots');
+
+            if (!track || !dotsNav) return;
 
             const slides = Array.from(track.children);
-            const dotsNav = document.querySelector(dotsSelector);
-            if (slides.length <= 1) return;
-            
+            if (slides.length <= 1) {
+                if(dotsNav) dotsNav.style.display = 'none';
+                return;
+            }
+
             let slideWidth = slides[0].getBoundingClientRect().width;
             let currentIndex = 0;
+
+            dotsNav.innerHTML = '';
 
             const dots = slides.map((_, i) => {
                 const button = document.createElement('button');
@@ -1736,17 +1745,16 @@
                 return button;
             });
 
-            if (dotsNav) dots.forEach(dot => dotsNav.appendChild(dot));
+            dots.forEach(dot => dotsNav.appendChild(dot));
 
             const moveToSlide = (targetIndex) => {
-                if (!dots[currentIndex]) return;
+                if (!dots[currentIndex] || targetIndex < 0 || targetIndex >= slides.length) return;
                 track.style.transform = `translateX(-${(slideWidth + slideMargin) * targetIndex}px)`;
                 dots[currentIndex].classList.remove('active');
                 dots[targetIndex].classList.add('active');
                 currentIndex = targetIndex;
             };
             
-            // Recalcular ancho en resize
             window.addEventListener('resize', () => {
                 slideWidth = slides[0].getBoundingClientRect().width;
                 moveToSlide(currentIndex);
@@ -1758,9 +1766,8 @@
             }, 5000);
         };
 
-        // --- Inicializar Carruseles ---
-        initCarousel('.testimonial-track', '.testimonial-dots');
-        initCarousel('.insumos-track', '.insumos-dots');
+        initCarousel('#testimonios .testimonial-carousel');
+        initCarousel('#insumos .testimonial-carousel');
         
         // --- Menú Móvil ---
         const navMenu = document.getElementById('nav-menu'),
@@ -1850,7 +1857,8 @@
         const closeModal = (modal) => {
           if (modal == null) return;
           modal.classList.remove('active');
-          overlay.classList.remove('modal-open');
+          overlay.classList.remove('active');
+          document.body.classList.remove('modal-open');
         };
 
         openModalButtons.forEach(button => {
@@ -1880,6 +1888,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
