@@ -10,16 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO y Metadatos Esenciales --><title>Marian — MF Arcano | Tarot y Numerología · San Miguel</title>
-    <meta name="description" content="Mariana Fassio (MF Arcano). 35 años de experiencia en tarot, numerología y limpieza energética. Consultas presenciales en San Miguel y por videollamada.">
+    <meta name="description" content="Mariana Fassio (MF Arcano). 35 años de experiencia en tarot, numerología y limpieza energética. Consultas presenciales en San Miguel y por videollamada a nivel nacional e internacional.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://www.mfarcano.com.ar/"> <!-- Reemplazar con URL final --><!-- Open Graph (para redes sociales) --><meta property="og:title" content="Mariana Fassio — MF Arcano | Tarot y Numerología con 35 años de experiencia">
-    <meta property="og:description" content="Especialista en tarot evolutivo, numerología, limpiezas energéticas y más. Consultas online y presenciales en San Miguel.">
+    <meta property="og:description" content="Especialista en tarot evolutivo, numerología, limpiezas energéticas y más. Consultas online nacionales e internacionales y presenciales en San Miguel.">
     <meta property="og:image" content="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760705529/11_aiyfsx.jpg"> <!-- Reemplazar con imagen de portada --><meta property="og:url" content="https://www.mfarcano.com.ar/"> <!-- Reemplazar con URL final --><meta property="og:type" content="website">
     <meta property="og:locale" content="es_AR">
 
     <!-- Twitter Card --><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Marian — MF Arcano | Tarot y Numerología · San Miguel">
-    <meta name="twitter:description" content="Especialista en tarot evolutivo, numerología, limpiezas energéticas. Consultas online y presenciales.">
+    <meta name="twitter:description" content="Especialista en tarot evolutivo, numerología, limpiezas energéticas. Consultas online nacionales e internacionales y presenciales.">
     <meta name="twitter:image" content="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760705529/11_aiyfsx.jpg"> <!-- Reemplazar con imagen de portada --><!-- Pre-conexión para Google Fonts (optimización) --><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
       "name": "Mariana Fassio - MF Arcano",
       "jobTitle": "Tarotista y Numeróloga",
       "url": "https://www.mfarcano.com.ar/",
-      "image": "https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760640797/41_s7akpl.jpg",
+      "image": "https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760800861/Imagen_de_WhatsApp_2025-10-17_a_las_09.39.18_3a29e75e_xufzct.jpg",
       "sameAs": [
         "https://www.instagram.com/tu_usuario_de_instagram"
       ],
@@ -435,7 +435,7 @@
       .hero-text p {
         font-size: 1.1rem;
         color: var(--c-light-text);
-        max-width: 500px;
+        max-width: 600px;
         margin: 0 auto 2rem;
       }
       .hero-ctas {
@@ -475,6 +475,9 @@
         grid-template-columns: 1fr;
         gap: 3rem;
         align-items: center;
+      }
+      .about-grid + .about-grid {
+        margin-top: 5rem;
       }
       .about-image img {
         border-radius: 20px;
@@ -879,6 +882,8 @@
         opacity: 0;
         visibility: hidden;
         transition: transform 0.3s ease, opacity 0.3s ease;
+        max-height: 80vh;
+        overflow-y: auto;
       }
       .modal.active {
         opacity: 1;
@@ -955,6 +960,16 @@
         .about-grid {
           grid-template-columns: 1fr 1.2fr;
           gap: 4rem;
+        }
+         .about-grid.about-grid--reverse {
+          grid-template-columns: 1.2fr 1fr;
+        }
+        .about-grid.about-grid--reverse > .about-text {
+          grid-column: 1 / 2;
+          text-align: right;
+        }
+        .about-grid.about-grid--reverse > .about-image {
+          grid-column: 2 / 3;
         }
         
         .services-grid {
@@ -1053,7 +1068,7 @@
           <div class="hero-text">
             <span class="hero-badge">35 años de trayectoria</span>
             <h1>Marian — MF Arcano</h1>
-            <p>Numerología, Tarot y Limpiezas energéticas.</p>
+            <p>Numerología, Tarot y Limpiezas energéticas. Consultas nacionales e internacionales.</p>
             <div class="hero-ctas">
               <a href="#contacto" class="btn btn-primary">Reservar consulta</a>
               <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
@@ -1072,21 +1087,33 @@
         <div class="container">
           <div class="about-grid reveal-on-scroll">
             <div class="about-image">
-              <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760640797/41_s7akpl.jpg" alt="Marian - MF Arcano en su espacio de consulta" loading="lazy">
+              <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760800861/Imagen_de_WhatsApp_2025-10-17_a_las_09.39.18_3a29e75e_xufzct.jpg" alt="Retrato profesional de Mariana Fassio" loading="lazy">
             </div>
             <div class="about-text">
               <h2>Una vida dedicada a la guía espiritual</h2>
-              <p>Me llamo Mariana Fassio (Marian) y soy la fundadora de MF Arcano. Mi camino comenzó a los 18 años estudiando parapsicología en la Universidad San Jorge. Desde entonces, mi gran pasión, la numerología, me llevó a especializarme con docentes de España y EE. UU. Mi búsqueda de conocimiento también me llevó a vivir un año en Ecuador, donde me perfeccioné en chamanismo.</p>
+              <p>Me llamo Mariana Fassio (Marian) y soy la fundadora de MF Arcano. Mi camino comenzó a los 18 años estudiando parapsicología en la Universidad San Jorge. Desde entonces, mi gran pasión, la numerología, me llevó a especializarme con docentes de España y EE. UU.</p>
               <p>A lo largo de 35 años, he integrado saberes diversos: Tarot, Reiki, péndulo hebreo, Feng Shui, grafología (perito), radiónica, foto Kirlian, runas, alquimia, PNL, Geobiología, Quiromancía, gemoterapia y aromaterapia.</p>
-              <p>Mi misión es ofrecerte una guía clara y profesional, ya sea en consultas presenciales, empresariales o por videollamada, combinando herramientas ancestrales con una perspectiva moderna.</p>
             </div>
           </div>
+          
+          <div class="about-grid about-grid--reverse reveal-on-scroll">
+            <div class="about-text">
+              <h3>Mi conexión con Ecuador</h3>
+              <p>Mi perfeccionamiento en chamanismo tuvo lugar en Ecuador, durante parte del 2019 y todo el 2022. Esta experiencia me permitió sumergirme en sus saberes ancestrales y conectar profundamente con la energía de la naturaleza andina, un conocimiento que hoy integro en mis consultas.</p>
+            </div>
+            <div class="about-image">
+               <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760800817/Imagen_de_WhatsApp_2025-10-18_a_las_12.04.13_ce7f2afd_kkuc5e.jpg" alt="Paisaje montañoso de Ecuador" loading="lazy">
+            </div>
+          </div>
+           <div style="text-align: center; max-width: 800px; margin: 5rem auto 0;" class="reveal-on-scroll">
+             <p>Mi misión es ofrecerte una guía clara y profesional, ya sea en consultas presenciales en San Miguel, o por videollamada a nivel nacional e internacional, combinando herramientas ancestrales con una perspectiva moderna.</p>
+           </div>
         </div>
       </section>
 
       <!-- Sección Galería --><section id="galeria">
         <div class="container">
-          <h2 class="reveal-on-scroll">Galería de Trabajos y Cursos</h2>
+          <h2 class="reveal-on-scroll">Galería</h2>
           <div class="gallery-carousel-wrapper reveal-on-scroll">
             <div class="gallery-carousel">
               <!-- Set de imágenes original --><img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760640885/25_frplwv.jpg" alt="Trabajos y cursos de MF Arcano 1" loading="lazy">
@@ -1155,9 +1182,9 @@
               <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760750508/Imagen_de_WhatsApp_2025-10-17_a_las_16.15.53_31241568_unzy0i.jpg" alt="Taller de Tarot y Numerología" loading="lazy">
             </div>
             <div class="about-text">
-              <h2>Talleres y Cursos</h2>
-              <p>Ofrezco formaciones personales y grupales para quienes deseen profundizar en su camino espiritual. Todos los cursos incluyen certificado y material de estudio completo.</p>
-              <a href="#contacto" class="btn btn-primary" style="margin-top: 1rem;">Consultar por Cursos</a>
+              <h2>Talleres</h2>
+              <p>Ofrezco formaciones personales y grupales para quienes deseen profundizar en su camino espiritual. Todos los talleres incluyen certificado y material de estudio completo.</p>
+              <a href="#contacto" class="btn btn-primary" style="margin-top: 1rem;">Consultar por Talleres</a>
             </div>
           </div>
         </div>
@@ -1364,9 +1391,9 @@
               </div>
             </details>
             <details class="faq-item">
-              <summary>¿Hacés trabajos a distancia?</summary>
+              <summary>¿Ofrecés consultas nacionales e internacionales?</summary>
               <div class="answer">
-                <p>Sí, la gran mayoría de mis servicios, incluyendo lecturas de tarot, numerología y limpiezas energéticas, pueden realizarse de manera efectiva a distancia, sin importar en qué parte del mundo te encuentres.</p>
+                <p>¡Sí! Ofrezco todos mis servicios a través de videollamada para consultantes tanto en Argentina como en cualquier parte del mundo. La energía no tiene fronteras.</p>
               </div>
             </details>
           </div>
@@ -1420,6 +1447,7 @@
               <h3>Información de Contacto</h3>
               <p><strong>Dirección (con cita previa):</strong><br>San Lorenzo 1755, San Miguel, Buenos Aires</p>
                <a href="https://share.google/FgmpEGOKW79QD3c9W" target="_blank" class="btn btn-secondary" style="margin-bottom: 1.5rem; display: inline-block;">Ver Ubicación y Opiniones en Google</a>
+              <p><strong>Consultas a Distancia:</strong><br>Realizo sesiones online para consultantes de todo el país y del exterior.</p>
               <p><strong>Email:</strong><br><a href="mailto:contacto@mfarcano.com.ar">contacto@mfarcano.com.ar</a></p>
               <p><strong>Horario:</strong><br>Turnos a coordinar.</p>
               <p>También podés contactarme directamente por WhatsApp para una respuesta más rápida.</p>
@@ -1888,6 +1916,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
