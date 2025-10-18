@@ -444,6 +444,12 @@
         gap: 1rem;
         flex-wrap: wrap;
       }
+      .hero-notice {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        color: var(--c-light-text);
+        font-style: italic;
+      }
       .hero-image-wrapper {
         position: relative;
         max-width: 450px;
@@ -534,6 +540,41 @@
       .insumos-carousel .testimonial-slide img {
         aspect-ratio: 1 / 1; /* Make it square */
         object-fit: cover;
+      }
+      .insumos-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 2.5rem;
+      }
+      .insumos-list li {
+        background-color: var(--c-cream);
+        padding: 0.5rem 1.2rem;
+        border-radius: 20px;
+        font-weight: 600;
+        color: var(--c-text);
+        border: 1px solid var(--c-mint);
+      }
+      
+      /* -------------- */
+      /* Talleres       */
+      /* -------------- */
+      #talleres .about-grid {
+        gap: 4rem;
+      }
+      #talleres .about-text {
+        text-align: center;
+      }
+      @media (min-width: 768px) {
+        #talleres .about-grid {
+          grid-template-columns: 1fr 1.2fr;
+        }
+        #talleres .about-text {
+          text-align: left;
+        }
       }
 
       /* ----------- */
@@ -971,6 +1012,7 @@
           <li class="nav-item"><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
           <li class="nav-item"><a href="#galeria" class="nav-link">Galería</a></li>
           <li class="nav-item"><a href="#insumos" class="nav-link">Venta de Insumos</a></li>
+          <li class="nav-item"><a href="#talleres" class="nav-link">Talleres</a></li>
           <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
           <li class="nav-item"><a href="#testimonios" class="nav-link">Testimonios</a></li>
           <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
@@ -983,6 +1025,7 @@
             <li class="nav-item"><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
             <li class="nav-item"><a href="#galeria" class="nav-link">Galería</a></li>
             <li class="nav-item"><a href="#insumos" class="nav-link">Venta de Insumos</a></li>
+             <li class="nav-item"><a href="#talleres" class="nav-link">Talleres</a></li>
             <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
             <li class="nav-item"><a href="#testimonios" class="nav-link">Testimonios</a></li>
             <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
@@ -1015,7 +1058,9 @@
               <a href="#contacto" class="btn btn-primary">Reservar consulta</a>
               <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
               <a href="#insumos" class="btn btn-secondary">Venta de Insumos</a>
+              <a href="https://share.google/FgmpEGOKW79QD3c9W" target="_blank" class="btn btn-secondary">Ver Opiniones en Google</a>
             </div>
+             <p class="hero-notice">Todas las consultas son con turno previo.</p>
           </div>
           <div class="hero-image-wrapper">
             <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760705529/11_aiyfsx.jpg" alt="Un espacio de consulta con cartas de tarot dispuestas sobre la mesa" class="hero-image" loading="lazy">
@@ -1103,6 +1148,21 @@
         </div>
       </section>
       
+      <!-- Sección Talleres y Cursos --><section id="talleres">
+        <div class="container">
+          <div class="about-grid reveal-on-scroll">
+             <div class="about-image">
+              <img src="https://res.cloudinary.com/dm2g8wqvx/image/upload/v1760750508/Imagen_de_WhatsApp_2025-10-17_a_las_16.15.53_31241568_unzy0i.jpg" alt="Taller de Tarot y Numerología" loading="lazy">
+            </div>
+            <div class="about-text">
+              <h2>Talleres y Cursos</h2>
+              <p>Ofrezco formaciones personales y grupales para quienes deseen profundizar en su camino espiritual. Todos los cursos incluyen certificado y material de estudio completo.</p>
+              <a href="#contacto" class="btn btn-primary" style="margin-top: 1rem;">Consultar por Cursos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Sección Servicios --><section id="servicios">
         <div class="container">
           <h2 class="reveal-on-scroll">Mis Servicios</h2>
@@ -1346,7 +1406,7 @@
                   <option value="Trabajos con Velas">Trabajos con Velas</option>
                   <option value="Cirios Liturgicos">Cirios Litúrgicos</option>
                   <option value="Limpieza Energetica">Limpieza Energética</option>
-                  <option value="Cursos">Cursos y Talleres</option>
+                  <option value="Talleres y Cursos">Talleres y Cursos</option>
                   <option value="Otro">Otro</option>
                 </select>
               </div>
@@ -1359,6 +1419,7 @@
             <div class="contact-info">
               <h3>Información de Contacto</h3>
               <p><strong>Dirección (con cita previa):</strong><br>San Lorenzo 1755, San Miguel, Buenos Aires</p>
+               <a href="https://share.google/FgmpEGOKW79QD3c9W" target="_blank" class="btn btn-secondary" style="margin-bottom: 1.5rem; display: inline-block;">Ver Ubicación y Opiniones en Google</a>
               <p><strong>Email:</strong><br><a href="mailto:contacto@mfarcano.com.ar">contacto@mfarcano.com.ar</a></p>
               <p><strong>Horario:</strong><br>Turnos a coordinar.</p>
               <p>También podés contactarme directamente por WhatsApp para una respuesta más rápida.</p>
@@ -1398,7 +1459,10 @@
         <div class="footer-links">
           <a href="mailto:contacto@mfarcano.com.ar">contacto@mfarcano.com.ar</a> |
           <a href="tel:+5491136919318">(011) 3691-9318</a> |
-          <span>San Lorenzo 1755, San Miguel</span>
+          <span>San Lorenzo 1755, San Miguel (con turno previo)</span>
+        </div>
+         <div style="margin-top: 1rem;">
+          <a href="https://share.google/FgmpEGOKW79QD3c9W" target="_blank">Ver Opiniones en Google</a>
         </div>
         <div class="footer-socials">
           <a href="https://instagram.com/tu_usuario_de_instagram" target="_blank" aria-label="Instagram">
@@ -1816,6 +1880,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
